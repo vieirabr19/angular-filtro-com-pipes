@@ -1,0 +1,29 @@
+<h3>Form e ngForm</h3>
+
+<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+    <input type="text" required name="nome" [(ngModel)]="nome" />
+
+    <textarea type="text" required name="texto" [(ngModel)]="texto"></textarea>
+
+    <div>
+        <input type="radio" name="groupStatus" id="status1" value="ativo" [(ngModel)]="statusSelected" />
+        <label for="status1">Ativo</label>
+
+        <input type="radio" name="groupStatus" id="status2" value="inativo" [(ngModel)]="statusSelected" />
+        <label for="status2">Inátivo</label>
+    </div>
+
+    <div>
+        <input type="checkbox" name="termos" id="termos" [(ngModel)]="termos">
+        <label for="termos">Termos</label>
+    </div>
+
+    <div>
+        <button type="submit">Enviar</button>
+        <button type="button" (click)="onReset(meuForm)">Limpar</button>
+    </div>
+</form>
+
+<p>Valid: {{ meuForm.valid }}</p>
+<p>Tocado: {{ meuForm.touched }}</p>
+<p>Sujo: {{ meuForm.dirty }}</p>
