@@ -9,10 +9,14 @@ registerLocaleData(pt, 'pt-BR');
 import { AppComponent } from './app.component';
 import { StatusModule } from './pipes/status.module';
 import { FormsModule } from '@angular/forms';
+import { OperationsComponent } from './components/operations/operations.component';
+import { TemplateDrivenFormsComponent } from './components/template-driven-forms/template-driven-forms.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OperationsComponent,
+    TemplateDrivenFormsComponent
   ],
   imports: [
     BrowserModule,

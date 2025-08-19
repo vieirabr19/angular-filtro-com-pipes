@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
 
 body {
-    background-color: grey;
+    background-color: #dbdbdb;
     font-family: 'Poppins', sans-serif;
+}
+
+input, button {
+    padding: 5px;
+}
+
+.error{
+    color: #dc3545;
+    font-size: 12px;
 }

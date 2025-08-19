@@ -1,40 +1,6 @@
-.operations {
-    &__filter {
-        .operations__filter-input {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            margin-bottom: 10px;
-        }
-    }
-
-    &__table {
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        
-        &-cell {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-            background-color:  #c0c0c0;
-
-            &--white {
-                background-color:  #f2f2f2;
-            }
-        }
-    }
-
-    &__status {
-        position: relative;
-        padding: 0;
-        margin: 0;
-    }
-
-    &__icon {
-        position: absolute;
-        top: 3px;
-        right: 5px;
-    }
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
 }
