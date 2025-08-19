@@ -1,12 +1,5 @@
-<input type="text" ngModel #meuInputFormControl="ngModel" required minlength="5" />
-
-<button type="button" (click)="send()">Enviar</button>
-
-<div class="error" *ngIf="meuInputFormControl.invalid && meuInputFormControl.touched">
-    <span *ngIf="meuInputFormControl.hasError('required')">Campo obrigatório.</span>
-    <span *ngIf="meuInputFormControl.hasError('minlength')">O campo deve ter no minímo 5 caracteres.</span>
+<div class="template-driven-forms">
+    <app-comp-input />
+    <app-comp-select />
+    <app-comp-radio-button />
 </div>
-
-<p>Valido: {{ meuInputFormControl.valid }}</p>
-<p>Tocado: {{ meuInputFormControl.touched }}</p>
-<p>Sujo: {{ meuInputFormControl.dirty }}</p>

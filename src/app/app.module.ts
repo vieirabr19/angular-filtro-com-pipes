@@ -11,12 +11,18 @@ import { StatusModule } from './pipes/status.module';
 import { FormsModule } from '@angular/forms';
 import { OperationsComponent } from './components/operations/operations.component';
 import { TemplateDrivenFormsComponent } from './components/template-driven-forms/template-driven-forms.component';
+import { CompInputComponent } from './components/template-driven-forms/comp-input/comp-input.component';
+import { CompSelectComponent } from './components/template-driven-forms/comp-select/comp-select.component';
+import { CompRadioButtonComponent } from './components/template-driven-forms/comp-radio-button/comp-radio-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OperationsComponent,
-    TemplateDrivenFormsComponent
+    TemplateDrivenFormsComponent,
+    CompInputComponent,
+    CompSelectComponent,
+    CompRadioButtonComponent
   ],
   imports: [
     BrowserModule,

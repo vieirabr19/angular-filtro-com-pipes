@@ -1,0 +1,16 @@
+<h3>Radio button</h3>
+
+<form ngForm #f="ngForm">
+    <input type="radio" name="group1" id="html" value="html" [(ngModel)]="radioSelected" required />
+    <label for="html">HTML</label>
+    
+    <input type="radio" name="group1" id="css" value="css" [(ngModel)]="radioSelected" required />
+    <label for="css">CSS</label>
+    
+    <input type="radio" name="group1" id="javascript" value="javascript" [(ngModel)]="radioSelected" required />
+    <label for="javascript">javaScript</label>
+    
+    <p>Radio selected: {{ radioSelected }}</p>
+    
+    <button type="button" [disabled]="f.invalid">Enviar</button>
+</form>

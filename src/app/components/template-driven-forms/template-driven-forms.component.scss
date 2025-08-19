@@ -1,7 +1,4 @@
-.ng-valid.ng-touched {
-    border-color: green;
-}
-
-.ng-invalid.ng-touched {
-    border-color: red;
+.template-driven-forms{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }

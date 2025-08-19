@@ -1,0 +1,24 @@
+<h3>Select</h3>
+
+<label for="nationalities"></label>
+<select 
+    name="nationalities" 
+    id="nationalities"
+    [(ngModel)]="nationalitiSelected"
+    #meuSelectFormControl="ngModel"
+    minlength="1"
+    required
+>
+    <option value="">Selecione</option>
+    <option [value]="nationaliti.id" *ngFor="let nationaliti of nationalities">{{ nationaliti.description}}</option>
+</select>
+
+<p class="text-error" *ngIf="meuSelectFormControl.invalid && meuSelectFormControl.touched">
+    <span *ngIf="meuSelectFormControl.hasError('required')">O campo é obrigatório.</span>
+</p>
+
+<p>Nationaliti selected: {{ nationalitiSelected }}</p>
+
+<p>Valido: {{ meuSelectFormControl.valid }}</p>
+<p>Tocado: {{ meuSelectFormControl.touched }}</p>
+<p>Sujo: {{ meuSelectFormControl.dirty }}</p>
