@@ -15,6 +15,7 @@ import { CompInputComponent } from './components/template-driven-forms/comp-inpu
 import { CompSelectComponent } from './components/template-driven-forms/comp-select/comp-select.component';
 import { CompRadioButtonComponent } from './components/template-driven-forms/comp-radio-button/comp-radio-button.component';
 import { CompFormNgFormComponent } from './components/template-driven-forms/comp-form-ng-form/comp-form-ng-form.component';
+import { CompNgModelGroupComponent } from './components/template-driven-forms/comp-ng-model-group/comp-ng-model-group.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CompFormNgFormComponent } from './components/template-driven-forms/comp
     CompInputComponent,
     CompSelectComponent,
     CompRadioButtonComponent,
-    CompFormNgFormComponent
+    CompFormNgFormComponent,
+    CompNgModelGroupComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./comp-form-ng-form.component.scss']
 })
 export class CompFormNgFormComponent implements AfterViewInit {
-
   @ViewChild('meuForm') formEl!: NgForm;
 
   nome: string = 'Luiz';
@@ -25,7 +24,7 @@ export class CompFormNgFormComponent implements AfterViewInit {
 
   onReset(form: NgForm){
     form.reset();
-    
+
     console.log(form.value);
 
     console.log(this.nome);
