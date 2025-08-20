@@ -19,6 +19,8 @@ import { CompNgModelGroupComponent } from './components/template-driven-forms/co
 import { FormProfissionComponent } from './components/template-driven-forms/form-with-children/form-profission/form-profission.component';
 import { FormUserComponent } from './components/template-driven-forms/form-with-children/form-user/form-user.component';
 import { FormMainComponent } from './components/template-driven-forms/form-with-children/form-main/form-main.component';
+import { CustomValidatorFormEx1Component } from './components/template-driven-forms/custom-validators/ex1/custom-validator-form-ex1/custom-validator-form-ex1.component';
+import { InvalidTextValidatorDirective } from './components/template-driven-forms/custom-validators/ex1/directives/invalid-text-validator.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { FormMainComponent } from './components/template-driven-forms/form-with-
     CompNgModelGroupComponent,
     FormProfissionComponent,
     FormUserComponent,
-    FormMainComponent
+    FormMainComponent,
+    CustomValidatorFormEx1Component,
+    InvalidTextValidatorDirective
   ],
   imports: [
     BrowserModule,

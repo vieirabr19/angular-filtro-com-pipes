@@ -1,0 +1,22 @@
+<h3>Validador customizado</h3>
+
+<form #meuForm="ngForm">
+    <input 
+        type="text" 
+        name="nome" 
+        required 
+        placeholder="Digite seu nome"
+        ngModel 
+        #nomeControl="ngModel" 
+        appInvalidTextValidator
+    >
+
+    <div class="text-error" *ngIf="nomeControl && nomeControl.invalid && (nomeControl.touched || nomeControl.dirty)">
+        <span *ngIf="nomeControl.hasError('required')">Campo obrigatório.</span>
+        <span *ngIf="nomeControl.hasError('invalidText')">Texto inválido.</span>
+    </div>
+
+    <br /> <br />
+
+    <button [disabled]="meuForm.invalid">Enviar</button>
+</form>

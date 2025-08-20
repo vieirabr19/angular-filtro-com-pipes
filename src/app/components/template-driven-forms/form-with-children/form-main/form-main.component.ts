@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 export class FormMainComponent {
 
   onSubmit(form: NgForm){
+    console.log(form.value);
+
     const { usuario, profissao } = form.value;
     console.log(`Meu nome é ${usuario.nome} e tenho ${usuario.idade} anos. Minha profissão é ${profissao.cargo} no setor ${profissao.setor}.`);
   }
