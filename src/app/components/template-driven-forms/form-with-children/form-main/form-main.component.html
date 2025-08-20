@@ -1,0 +1,10 @@
+<h3>Formulário com filhos</h3>
+
+<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+    <app-form-user />
+    <app-form-profission />
+
+    <br /><br />
+
+    <button type="submit" [disabled]="meuForm.invalid">Enviar</button>
+</form>
