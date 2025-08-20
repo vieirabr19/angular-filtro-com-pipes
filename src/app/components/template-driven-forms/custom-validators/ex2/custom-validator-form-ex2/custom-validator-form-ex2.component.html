@@ -1,0 +1,18 @@
+<h3>Validador customizado para multiplos campos</h3>
+
+<form #meuForm="ngForm" appDepartamentQuantityValidator>
+    <label for="departamento">Departamento</label><br />
+    
+    <select name="departamento" ngModel>
+        <option value="">Selecione</option>
+        <option value="IT">Tecnologia</option>
+        <option value="HR">Recursos Humanos</option>
+    </select>
+
+    <input type="text" name="quantidade" ngModel placeholder="Quantidade de pessoas">
+
+    <div class="text-error" *ngIf="meuForm && meuForm.invalid && meuForm.dirty">
+        <span *ngIf="meuForm.hasError('invalidITQuantity')">O departamento de Tecnologia deve ter no máximo 10 pessoas.</span>
+        <span *ngIf="meuForm.hasError('invalidHRQuantity')">O departamento de Recursos Humanos deve ter no máximo 20 pessoas. </span>
+    </div>
+</form>
