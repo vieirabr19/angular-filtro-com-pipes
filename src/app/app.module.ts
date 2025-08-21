@@ -23,6 +23,8 @@ import { CustomValidatorFormEx1Component } from './components/template-driven-fo
 import { InvalidTextValidatorDirective } from './components/template-driven-forms/custom-validators/ex1/directives/invalid-text-validator.directive';
 import { CustomValidatorFormEx2Component } from './components/template-driven-forms/custom-validators/ex2/custom-validator-form-ex2/custom-validator-form-ex2.component';
 import { DepartamentQuantityValidatorDirective } from './components/template-driven-forms/custom-validators/ex2/directives/departament-quantity-validator.directive';
+import { AsyncCustomValidatorComponent } from './components/template-driven-forms/custom-validators/asynchronous/async-custom-validator/async-custom-validator.component';
+import { UserNameValidatorFormDirective } from './components/template-driven-forms/custom-validators/asynchronous/directives/user-name-validator-form.directive';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { DepartamentQuantityValidatorDirective } from './components/template-dri
     CustomValidatorFormEx1Component,
     InvalidTextValidatorDirective,
     CustomValidatorFormEx2Component,
-    DepartamentQuantityValidatorDirective
+    DepartamentQuantityValidatorDirective,
+    AsyncCustomValidatorComponent,
+    UserNameValidatorFormDirective
   ],
   imports: [
     BrowserModule,

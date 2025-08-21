@@ -1,0 +1,26 @@
+<h3>Validador customizado asycrono</h3>
+
+<form #meuForm="ngForm">
+    <input 
+        type="text" 
+        name="nome" 
+        placeholder="Digite seu nome" 
+        ngModel 
+        #nomeControl="ngModel"
+        [ngModelOptions]="{ updateOn: 'blur' }"
+        appUserNameValidatorForm
+    >
+
+    <div *ngIf="nomeControl.dirty">
+        <span style="color: orange;" *ngIf="nomeControl.pending">Verifiando...</span>
+        <span style="color: green;" *ngIf="!nomeControl.pending && nomeControl.valid && !nomeControl.hasError('invalidUserName')">Usuário existente</span>
+        <span style="color: red;" *ngIf="!nomeControl.pending && nomeControl.invalid && nomeControl.hasError('invalidUserName')">Usuário inexistente</span>
+    </div>
+
+    <div>
+        Válido: {{ nomeControl.valid }}<br />
+        Tocado: {{ nomeControl.touched }}<br />
+        Sujo: {{ nomeControl.dirty }}<br />
+        Pendente: {{ nomeControl.pending }}
+    </div>
+</form>
